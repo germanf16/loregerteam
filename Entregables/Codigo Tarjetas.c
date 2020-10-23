@@ -16,11 +16,11 @@ void main (void)
 
 	if ( u8Check == 0 )
 	{
-		printf("\n NUMERO DE TARJETA VALIDO ",)	
+		printf("\n NUMERO DE TARJETA VALIDO ",);	
 	}
 	else
 	{
-
+		printf("\n NUMERO DE TARJETA INVALIDO ",)
 	}	
 	
 }
