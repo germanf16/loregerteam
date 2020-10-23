@@ -13,14 +13,20 @@ void main (void)
 	u8Check = u8LuhnCheck (&au8CardNumber[0]);
 
 	printf("NUMERO DE TARJETA");
+	
+	for(int n=0; n<16; n++)
+	{
+		printf("%d", au8CardNumber[n]);
+	}
+	u8Check= u8LuhnCheck(&au8CardNumber[0]);
 
 	if ( u8Check == 0 )
 	{
-		printf("\n NUMERO DE TARJETA VALIDO ",);	
+		printf("\n NUMERO DE TARJETA VALIDO ");	
 	}
 	else
 	{
-		printf("\n NUMERO DE TARJETA INVALIDO ",)
+		printf("\n NUMERO DE TARJETA INVALIDO")
 	}	
 	
 }
