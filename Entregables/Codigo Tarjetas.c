@@ -23,7 +23,7 @@ void main (void)
  
 uint8 u8LuhnCheck ( uint8 *pu8Data ) 
 { 
-	 
+	uint8 u8TempCardNumber = 0;
+	uint8 u8Check = 0;
+	
 } 
-
-uint8 u8luhnCheck (uint8*pu8Data)
