@@ -38,6 +38,7 @@ void main ( void )
 	astMyParks[enSector2].u8AvailableSlots = SECTOR2_SLOTS;
 	astMyParks[enSector3].u8AvailableSlots = SECTOR3_SLOTS;
 	astMyParks[enSector4].u8AvailableSlots = SECTOR4_SLOTS;
+
 	astMyParks[enSector0].u8NotAvailableSlots = 0;
 	astMyParks[enSector1].u8NotAvailableSlots = 0;
 	astMyParks[enSector2].u8NotAvailableSlots = 0;
@@ -126,10 +127,6 @@ void main ( void )
 		}
 
 	}
-
-
-	ShowAvailableSlots;
-
 }
 
 /*F1*/
@@ -138,8 +135,33 @@ void main ( void )
 */
 void ShowAvailableSlots ( tenParkingSectors enCurrentSector )
 {
-	tenParkingSectors
-	printf("la cantidad de espacios disponibles en esta seccion es de : %d\n", tenParkingSectors);
+	uint8 u8Availability = 0;
+
+	if ( enCurrentSector == enSector0 )
+	{
+		u8Availability = astMyParks[enSector0].u8AvailableSlots;
+		printf("\nShowing Available Spots (Sector 0): %d\n", u8Availability);
+	}
+	else if ( enCurrentSector == enSector1 )
+	{
+		u8Availability = astMyParks[enSector1].u8AvailableSlots;
+		printf("\nShowing Available Spots (Sector 1): %d\n", u8Availability);
+	}
+	else if ( enCurrentSector == enSector2 )
+	{
+		u8Availability = astMyParks[enSector2].u8AvailableSlots;
+		printf("\nShowing Available Spots (Sector 2): %d\n", u8Availability);
+	}
+	else if ( enCurrentSector == enSector3 )
+	{
+		u8Availability = astMyParks[enSector3].u8AvailableSlots;
+		printf("\nShowing Available Spots (Sector 3): %d\n", u8Availability);
+	}
+	else if ( enCurrentSector == enSector4 )
+	{
+		u8Availability = astMyParks[enSector4].u8AvailableSlots;
+		printf("\nShowing Available Spots (Sector 4): %d\n", u8Availability);
+	}
 }
 
 /*F2*/
@@ -148,7 +170,33 @@ void ShowAvailableSlots ( tenParkingSectors enCurrentSector )
 */
 void ShowNotAvailableSlots ( tenParkingSectors enCurrentSector )
 {
+	uint8 u8NotAvailability = 0;
 
+	if ( enCurrentSector == enSector0 )
+	{
+		u8NotAvailability = astMyParks[enSector0].u8NotAvailableSlots;
+		printf("\nShowing Not Available Spots (Sector 0): %d\n", u8NotAvailability);
+	}
+	else if ( enCurrentSector == enSector1 )
+	{
+		u8NotAvailability = astMyParks[enSector1].u8NotAvailableSlots;
+		printf("\nShowing Not Available Spots (Sector 1): %d\n", u8NotAvailability);
+	}
+	else if ( enCurrentSector == enSector2 )
+	{
+		u8NotAvailability = astMyParks[enSector2].u8NotAvailableSlots;
+		printf("\nShowing Not Available Spots (Sector 2): %d\n", u8NotAvailability);
+	}
+	else if ( enCurrentSector == enSector3 )
+	{
+		u8NotAvailability = astMyParks[enSector3].u8NotAvailableSlots;
+		printf("\nShowing Not Available Spots (Sector 3): %d\n", u8NotAvailability);
+	}
+	else if ( enCurrentSector == enSector4 )
+	{
+		u8NotAvailability = astMyParks[enSector4].u8NotAvailableSlots;
+		printf("\nShowing Not Available Spots (Sector 4): %d\n", u8NotAvailability);
+	}
 }
 
 /*F3*/
@@ -157,29 +205,208 @@ void ShowNotAvailableSlots ( tenParkingSectors enCurrentSector )
 */
 void ShowEarnedMoney ( tenParkingSectors enCurrentSector )
 {
+	uint32 u32MoneyProfit = 0;
 
+	if ( enCurrentSector == enSector0 )
+	{
+		u32MoneyProfit = astMyParks[enSector0].u32MoneyEarn;
+		printf("\nShowing Earned Money (Sector 0): $ %d.00\n", u32MoneyProfit);
+	}
+	else if ( enCurrentSector == enSector1 )
+	{
+		u32MoneyProfit = astMyParks[enSector1].u32MoneyEarn;
+		printf("\nShowing Available Spots (Sector 1): $ %d.00\n", u32MoneyProfit);
+	}
+	else if ( enCurrentSector == enSector2 )
+	{
+		u32MoneyProfit = astMyParks[enSector2].u32MoneyEarn;
+		printf("\nShowing Available Spots (Sector 2): $ %d.00\n", u32MoneyProfit);
+	}
+	else if ( enCurrentSector == enSector3 )
+	{
+		u32MoneyProfit = astMyParks[enSector3].u32MoneyEarn;
+		printf("\nShowing Available Spots (Sector 3): $ %d.00\n", u32MoneyProfit);
+	}
+	else if ( enCurrentSector == enSector4 )
+	{
+		u32MoneyProfit = astMyParks[enSector4].u32MoneyEarn;
+		printf("\nShowing Available Spots (Sector 4): $ %d.00\n", u32MoneyProfit);
+	}
 }
+
 /*F4*/
 /*
 ->(F4) Una funcion con 1 parametro, la cual reciba la seccion de estacionamiento y permita ingresar un vehiculo a esa seccion
 */
 uint8 u8AddCarToSector( tenParkingSectors enCurrentSector )
 {
-
+	if ( enCurrentSector == enSector0 )
+	{
+		if ( astMyParks[enSector0].u8AvailableSlots > 0 )
+		{
+			astMyParks[enSector0].u8AvailableSlots--;
+			astMyParks[enSector0].u8NotAvailableSlots++;
+			return PARKING_SPOT_AVAILABLE;
+		}
+		else
+		{
+			return PARKING_SPOT_UNAVAILABLE;
+		}
+	}
+	else if ( enCurrentSector == enSector1 )
+	{
+		if ( astMyParks[enSector1].u8AvailableSlots > 0 )
+		{
+			astMyParks[enSector1].u8AvailableSlots--;
+			astMyParks[enSector1].u8NotAvailableSlots++;
+			return PARKING_SPOT_AVAILABLE;
+		}
+		else
+		{
+			return PARKING_SPOT_UNAVAILABLE;
+		}
+	}
+	else if ( enCurrentSector == enSector2 )
+	{
+		if ( astMyParks[enSector2].u8AvailableSlots > 0 )
+		{
+			astMyParks[enSector2].u8AvailableSlots--;
+			astMyParks[enSector2].u8NotAvailableSlots++;
+			return PARKING_SPOT_AVAILABLE;
+		}
+		else
+		{
+			return PARKING_SPOT_UNAVAILABLE;
+		}
+	}
+	else if ( enCurrentSector == enSector3 )
+	{
+		if ( astMyParks[enSector3].u8AvailableSlots > 0 )
+		{
+			astMyParks[enSector3].u8AvailableSlots--;
+			astMyParks[enSector3].u8NotAvailableSlots++;
+			return PARKING_SPOT_AVAILABLE;
+		}
+		else
+		{
+			return PARKING_SPOT_UNAVAILABLE;
+		}
+	}
+	else if ( enCurrentSector == enSector4 )
+	{
+		if ( astMyParks[enSector4].u8AvailableSlots > 0 )
+		{
+			astMyParks[enSector4].u8AvailableSlots--;
+			astMyParks[enSector4].u8NotAvailableSlots++;
+			return PARKING_SPOT_AVAILABLE;
+		}
+		else
+		{
+			return PARKING_SPOT_UNAVAILABLE;
+		}
+	}
+	
 }
+
 /*F5*/
 /*
 ->(F5) Una funcion con 1 parametro, la cual reciba la seccion de estacionamiento y permita retirar un vehiculo de la cuenta de la seccion
 */
 uint8 u8RemoveCarFromSector( tenParkingSectors enCurrentSector )
 {
-
+	if ( enCurrentSector == enSector0 )
+	{
+		if ( astMyParks[enSector0].u8NotAvailableSlots > 0 )
+		{
+			astMyParks[enSector0].u8AvailableSlots++;
+			astMyParks[enSector0].u8NotAvailableSlots--;
+			return PARKING_SPOT_AVAILABLE;
+		}
+		else
+		{
+			return PARKING_SPOT_UNAVAILABLE;
+		}
+	}
+	else if ( enCurrentSector == enSector1 )
+	{
+		if ( astMyParks[enSector1].u8NotAvailableSlots > 0 )
+		{
+			astMyParks[enSector1].u8AvailableSlots++;
+			astMyParks[enSector1].u8NotAvailableSlots--;
+			return PARKING_SPOT_AVAILABLE;
+		}
+		else
+		{
+			return PARKING_SPOT_UNAVAILABLE;
+		}
+	}
+	else if ( enCurrentSector == enSector2 )
+	{
+		if ( astMyParks[enSector2].u8NotAvailableSlots > 0 )
+		{
+			astMyParks[enSector2].u8AvailableSlots++;
+			astMyParks[enSector2].u8NotAvailableSlots--;
+			return PARKING_SPOT_AVAILABLE;
+		}
+		else
+		{
+			return PARKING_SPOT_UNAVAILABLE;
+		}
+	}
+	else if ( enCurrentSector == enSector3 )
+	{
+		if ( astMyParks[enSector3].u8NotAvailableSlots > 0 )
+		{
+			astMyParks[enSector3].u8AvailableSlots++;
+			astMyParks[enSector3].u8NotAvailableSlots--;
+			return PARKING_SPOT_AVAILABLE;
+		}
+		else
+		{
+			return PARKING_SPOT_UNAVAILABLE;
+		}
+	}
+	else if ( enCurrentSector == enSector4 )
+	{
+		if ( astMyParks[enSector4].u8NotAvailableSlots > 0 )
+		{
+			astMyParks[enSector4].u8AvailableSlots++;
+			astMyParks[enSector4].u8NotAvailableSlots--;
+			return PARKING_SPOT_AVAILABLE;
+		}
+		else
+		{
+			return PARKING_SPOT_UNAVAILABLE;
+		}
+	}
+	
 }
+
 /*F6*/
 /*
 ->(F6) Una funcion con 1 parametro, la cual reciba la seccion de estacionamiento y registre el pago por haber ingresado el vehiculo
 */
 void u8ImportPaymentOfSlot( tenParkingSectors enCurrentSector )
 {
+	if ( enCurrentSector == enSector0 )
+	{
+		astMyParks[enSector0].u32MoneyEarn += 10;
+	}
+	else if ( enCurrentSector == enSector1 )
+	{
+		astMyParks[enSector1].u32MoneyEarn += 10;
+	}
+	else if ( enCurrentSector == enSector2 )
+	{
+		astMyParks[enSector2].u32MoneyEarn += 10;
+	}
+	else if ( enCurrentSector == enSector3 )
+	{
+		astMyParks[enSector3].u32MoneyEarn += 10;
+	}
+	else if ( enCurrentSector == enSector4 )
+	{
+		astMyParks[enSector4].u32MoneyEarn += 10;
+	}
 
 }

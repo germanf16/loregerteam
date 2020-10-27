@@ -25,6 +25,8 @@ typedef enum
 #define SECTOR2_SLOTS		25
 #define SECTOR3_SLOTS		7
 #define SECTOR4_SLOTS		12
+#define PARKING_SPOT_UNAVAILABLE	0
+#define PARKING_SPOT_AVAILABLE 		1
 
 #define INIT_PARKING_SLOTS		\
 {								\
