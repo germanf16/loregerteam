@@ -32,6 +32,17 @@ void main ( void )
 	uint8 u8InputAction = 0;
 	tenParkingSectors enSector; 
 	uint8 u8ConfirmationFromAction = 0;
+	uint8 u8AvailableSpots = 0;
+	astMyParks[enSector0].u8AvailableSlots = SECTOR0_SLOTS;
+	astMyParks[enSector1].u8AvailableSlots = SECTOR1_SLOTS;
+	astMyParks[enSector2].u8AvailableSlots = SECTOR2_SLOTS;
+	astMyParks[enSector3].u8AvailableSlots = SECTOR3_SLOTS;
+	astMyParks[enSector4].u8AvailableSlots = SECTOR4_SLOTS;
+	astMyParks[enSector0].u8NotAvailableSlots = 0;
+	astMyParks[enSector1].u8NotAvailableSlots = 0;
+	astMyParks[enSector2].u8NotAvailableSlots = 0;
+	astMyParks[enSector3].u8NotAvailableSlots = 0;
+	astMyParks[enSector4].u8NotAvailableSlots = 0;
 
 
 
@@ -56,22 +67,52 @@ void main ( void )
 			if( u8InputAction == 1 )
 			{
 
+				ShowAvailableSlots (enSector);
 			}
+
 			else if( u8InputAction == 2 )
 			{
+
+				ShowNotAvailableSlots (enSector);
 
 			}
 			else if( u8InputAction == 3 )
 			{
 
+				ShowEarnedMoney (enSector);
+
+
 			}
 			else if( u8InputAction == 4 )
 			{
+
+				u8ConfirmationFromAction = u8AddCarToSector (enSector);
+				u8ConfirmationFromAction = 0;
+				if ( u8ConfirmationFromAction == 0)
+				{
+					printf("The parking place is occupied\n");
+				}
+				else
+				{
+					printf("The parking place is free\n");
+					u8ImportPaymentOfSlot( enSector );
+				}
 
 			}
 			else if ( u8InputAction == 5 )
 			{
 
+				u8ConfirmationFromAction = u8RemoveCarFromSector ( enSector ); 
+				u8ConfirmationFromAction = 0;
+				
+				if ( u8ConfirmationFromAction == 0)
+				{
+					printf("The parking place is unoccupied\n");
+				}
+					else
+					{
+						printf("The car left the place free\n");
+					}
 			}
 			else
 			{
