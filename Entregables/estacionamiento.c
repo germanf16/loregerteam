@@ -140,27 +140,27 @@ void ShowAvailableSlots ( tenParkingSectors enCurrentSector )
 	if ( enCurrentSector == enSector0 )
 	{
 		u8Availability = astMyParks[enSector0].u8AvailableSlots;
-		printf("\nShowing Available Spots (Sector 0): %d\n", u8Availability);
+		printf("Places Available (Sector 0): %d\n", u8Availability);
 	}
 	else if ( enCurrentSector == enSector1 )
 	{
 		u8Availability = astMyParks[enSector1].u8AvailableSlots;
-		printf("\nShowing Available Spots (Sector 1): %d\n", u8Availability);
+		printf("Places Available (Sector 1): %d\n", u8Availability);
 	}
 	else if ( enCurrentSector == enSector2 )
 	{
 		u8Availability = astMyParks[enSector2].u8AvailableSlots;
-		printf("\nShowing Available Spots (Sector 2): %d\n", u8Availability);
+		printf("Places Available (Sector 2): %d\n", u8Availability);
 	}
 	else if ( enCurrentSector == enSector3 )
 	{
 		u8Availability = astMyParks[enSector3].u8AvailableSlots;
-		printf("\nShowing Available Spots (Sector 3): %d\n", u8Availability);
+		printf("Places Available (Sector 3): %d\n", u8Availability);
 	}
 	else if ( enCurrentSector == enSector4 )
 	{
 		u8Availability = astMyParks[enSector4].u8AvailableSlots;
-		printf("\nShowing Available Spots (Sector 4): %d\n", u8Availability);
+		printf("Places Available (Sector 4): %d\n", u8Availability);
 	}
 }
 
@@ -175,27 +175,27 @@ void ShowNotAvailableSlots ( tenParkingSectors enCurrentSector )
 	if ( enCurrentSector == enSector0 )
 	{
 		u8NotAvailability = astMyParks[enSector0].u8NotAvailableSlots;
-		printf("\nShowing Not Available Spots (Sector 0): %d\n", u8NotAvailability);
+		printf("Places not Available (Sector 0): %d\n", u8NotAvailability);
 	}
 	else if ( enCurrentSector == enSector1 )
 	{
 		u8NotAvailability = astMyParks[enSector1].u8NotAvailableSlots;
-		printf("\nShowing Not Available Spots (Sector 1): %d\n", u8NotAvailability);
+		printf("Places not Available (Sector 1): %d\n", u8NotAvailability);
 	}
 	else if ( enCurrentSector == enSector2 )
 	{
 		u8NotAvailability = astMyParks[enSector2].u8NotAvailableSlots;
-		printf("\nShowing Not Available Spots (Sector 2): %d\n", u8NotAvailability);
+		printf("Places not Available (Sector 2): %d\n", u8NotAvailability);
 	}
 	else if ( enCurrentSector == enSector3 )
 	{
 		u8NotAvailability = astMyParks[enSector3].u8NotAvailableSlots;
-		printf("\nShowing Not Available Spots (Sector 3): %d\n", u8NotAvailability);
+		printf("Places not Available (Sector 3): %d\n", u8NotAvailability);
 	}
 	else if ( enCurrentSector == enSector4 )
 	{
 		u8NotAvailability = astMyParks[enSector4].u8NotAvailableSlots;
-		printf("\nShowing Not Available Spots (Sector 4): %d\n", u8NotAvailability);
+		printf("Places not Available (Sector 4): %d\n", u8NotAvailability);
 	}
 }
 
@@ -210,27 +210,27 @@ void ShowEarnedMoney ( tenParkingSectors enCurrentSector )
 	if ( enCurrentSector == enSector0 )
 	{
 		u32MoneyProfit = astMyParks[enSector0].u32MoneyEarn;
-		printf("\nShowing Earned Money (Sector 0): $ %d.00\n", u32MoneyProfit);
+		printf("Money earnings (Sector 0): $ %d.00\n", u32MoneyProfit);
 	}
 	else if ( enCurrentSector == enSector1 )
 	{
 		u32MoneyProfit = astMyParks[enSector1].u32MoneyEarn;
-		printf("\nShowing Available Spots (Sector 1): $ %d.00\n", u32MoneyProfit);
+		printf("Money earnings (Sector 1): $ %d.00\n", u32MoneyProfit);
 	}
 	else if ( enCurrentSector == enSector2 )
 	{
 		u32MoneyProfit = astMyParks[enSector2].u32MoneyEarn;
-		printf("\nShowing Available Spots (Sector 2): $ %d.00\n", u32MoneyProfit);
+		printf("Money earnings (Sector 2): $ %d.00\n", u32MoneyProfit);
 	}
 	else if ( enCurrentSector == enSector3 )
 	{
 		u32MoneyProfit = astMyParks[enSector3].u32MoneyEarn;
-		printf("\nShowing Available Spots (Sector 3): $ %d.00\n", u32MoneyProfit);
+		printf("Money earnings (Sector 3): $ %d.00\n", u32MoneyProfit);
 	}
 	else if ( enCurrentSector == enSector4 )
 	{
 		u32MoneyProfit = astMyParks[enSector4].u32MoneyEarn;
-		printf("\nShowing Available Spots (Sector 4): $ %d.00\n", u32MoneyProfit);
+		printf("Money earnings (Sector 4): $ %d.00\n", u32MoneyProfit);
 	}
 }
 
