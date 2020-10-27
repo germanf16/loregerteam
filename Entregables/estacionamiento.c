@@ -32,9 +32,12 @@ void main ( void )
 	uint8 u8InputAction = 0;
 	tenParkingSectors enSector; 
 	uint8 u8ConfirmationFromAction = 0;
+
+
+
 	while(1)
 	{
-	fflush(stdin);
+		fflush(stdin);
 		printf("Press 1 to -> Read Available Slots\n");
 		printf("Press 2 to -> Read Unavailable Slots\n");
 		printf("Press 3 to -> Read Earned Money\n");
@@ -82,36 +85,59 @@ void main ( void )
 		}
 
 	}
+
+
+	ShowAvailableSlots;
+
 }
 
 /*F1*/
+/*
+->(F1) Una funcion con 1 parametro, la cual reciba la seccion de estacionamiento (0, 1, 2, 3 o 4) e imprima la cantidad de espacios disponibles de esa seccion
+*/
 void ShowAvailableSlots ( tenParkingSectors enCurrentSector )
 {
-
+	tenParkingSectors
+	printf("la cantidad de espacios disponibles en esta seccion es de : %d\n", tenParkingSectors);
 }
 
 /*F2*/
+/*
+->(F2) Una funcion con 1 parametro, la cual reciba la seccion de estacionamiento (0, 1, 2, 3 o 4) e imprima la cantidad de espacios no disponibles de esa seccion
+*/
 void ShowNotAvailableSlots ( tenParkingSectors enCurrentSector )
 {
 
 }
 
 /*F3*/
+/*
+->(F3) Una funcion con 1 parametro, la cual reciba la seccion de estacionamiento (0, 1, 2, 3 o 4) e imprima la cantidad de dinero acumulada en esa sección
+*/
 void ShowEarnedMoney ( tenParkingSectors enCurrentSector )
 {
 
 }
 /*F4*/
+/*
+->(F4) Una funcion con 1 parametro, la cual reciba la seccion de estacionamiento y permita ingresar un vehiculo a esa seccion
+*/
 uint8 u8AddCarToSector( tenParkingSectors enCurrentSector )
 {
 
 }
 /*F5*/
+/*
+->(F5) Una funcion con 1 parametro, la cual reciba la seccion de estacionamiento y permita retirar un vehiculo de la cuenta de la seccion
+*/
 uint8 u8RemoveCarFromSector( tenParkingSectors enCurrentSector )
 {
 
 }
 /*F6*/
+/*
+->(F6) Una funcion con 1 parametro, la cual reciba la seccion de estacionamiento y registre el pago por haber ingresado el vehiculo
+*/
 void u8ImportPaymentOfSlot( tenParkingSectors enCurrentSector )
 {
 
