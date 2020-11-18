@@ -39,6 +39,7 @@ void main ( void )
 		default: printf("ERROR, no hay bebida con ese numero");
 
 	}
+}
 
 
 *//*while (1)
