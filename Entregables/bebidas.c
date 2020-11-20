@@ -3,6 +3,27 @@ typedef unsigned char uint8;
 typedef unsigned short uint16;
 typedef unsigned int uint32;
 
+typedef enum 
+{
+	estado1= 0;
+	estado2;
+	estado3
+}tenStates;
+
+typedef enum //bebida1
+{
+
+}estado1;
+
+typedef enum //bebida2
+{
+
+}estado2;
+
+typedef enum //bebida3
+{
+
+}estado3;
 
 
 
@@ -10,13 +31,17 @@ typedef unsigned int uint32;
 void main ( void )
 {
 	printf("Seleccione su bebida\n");
-	uint32 bebida;
+	uint32 u8bebida;
+	uint32 u8Drinks = 0;
+
+
 	printf("MENU:\n 1.Mojito tradicional\n  2.Paloma\n  3.Perla Negra\n");
 	scanf("%d",&bebida);
 
 
 	switch(bebida){
 		case 1: printf("seleccionaste Mojito Tradicional\n");
+				u8Delay =
 				printf("sirviendo limon\n");
 				printf("sirviendo hierbabuena\n");
 				printf("sirviendo jarabe\n");
