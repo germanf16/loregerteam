@@ -1,7 +1,9 @@
 #include "stdio.h"
 #include "stdlib.h"
 #include "time.h"
-
+typedef unsigned char uint8;
+typedef unsigned short uint16;
+typedef unsigned int uint32;
 #define limon    3
 #define hiervabuena  2
 #define jarabe 3
@@ -12,6 +14,7 @@
 #define squirt 4
 #define jagermeister 8
 #define boost 8
+void Drinks ( uint8 u8Beverage );
 
 typedef enum //menu
 {
@@ -19,8 +22,6 @@ typedef enum //menu
 	Paloma;
 	PerlaNegra
 }bebidass;
-
-
 
 typedef enum //menu
 {
@@ -58,7 +59,7 @@ void main ( void )
 	}
 }
 
-//
+
 void Drinks ( uint8 u8Beverage )
 {
 	if ( u8Beverage ==  Mojito)
