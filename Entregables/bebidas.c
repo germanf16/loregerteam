@@ -2,46 +2,38 @@
 typedef unsigned char uint8;
 typedef unsigned short uint16;
 typedef unsigned int uint32;
+uint16 u16seleccion;
 
-typedef enum 
+typedef enum //menu
 {
-	estado1= 0;
-	estado2;
-	estado3
+	int estado1 = 0;
+	int estado2;
+	int estado3
 }tenStates;
 
-typedef enum //bebida1
-{
-
-}estado1;
-
-typedef enum //bebida2
-{
-
-}estado2;
-
-typedef enum //bebida3
-{
-
-}estado3;
 
 
+//*
 
 
 void main ( void )
 {
+	tenStates bebida = estado1;
+	uint16 u16seleccion = 0;
 	printf("Seleccione su bebida\n");
-	uint32 u8bebida;
+	uuint16 u16bebidas;
 	uint32 u8Drinks = 0;
 
 
 	printf("MENU:\n 1.Mojito tradicional\n  2.Paloma\n  3.Perla Negra\n");
-	scanf("%d",&bebida);
+	scanf("%d",&bebidas);
 
-
-	switch(bebida){
-		case 1: printf("seleccionaste Mojito Tradicional\n");
-				u8Delay =
+while(1)
+{
+	switch ( bebida )
+	{
+		case estado1 :
+				printf("seleccionaste Mojito Tradicional\n");
 				printf("sirviendo limon\n");
 				printf("sirviendo hierbabuena\n");
 				printf("sirviendo jarabe\n");
@@ -49,14 +41,16 @@ void main ( void )
 				printf("sirviendo ron\n");
 				printf("sirviendo agua mineral\n");
 				break;
-		case 2: printf("seleccionaste Paloma\n");
+		case estado2 : 
+				printf("seleccionaste Paloma\n");
 				printf("sirviendo hielos\n");
 				printf("sirviendo tequila\n");
 				printf("sirviendo limon\n");
 				printf("sirviendo squirt\n");
 				printf("sirviendo agua mineral\n");
 				break;
-		case 3: printf("seleccionaste Perla Negra\n");
+		case estado3 : 
+				printf("seleccionaste Perla Negra\n");
 				printf("sirviendo hielos\n");
 				printf("sirviendo jagermeister\n");
 				printf("sirviendo boost\n");
@@ -65,7 +59,7 @@ void main ( void )
 
 	}
 }
-
+}
 
 *//*while (1)
 	{
@@ -97,4 +91,18 @@ void main ( void )
 
 
 	}
+	typedef enum //bebida1
+{
+
+};
+
+typedef enum //bebida2
+{
+
+};
+
+typedef enum //bebida3
+{
+
+};
 //*
