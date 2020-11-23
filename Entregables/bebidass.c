@@ -1,40 +1,18 @@
 #include "stdio.h"
-#include "stdlib.h"
-#include "time.h"
-typedef unsigned char uint8;
-typedef unsigned short uint16;
-typedef unsigned int uint32;
-#define limon    3
-#define hiervabuena  2
-#define jarabe 3
-#define hielos 5
-#define ron 6
-#define aguamineral 8
-#define tequila 7
-#define squirt 4
-#define jagermeister 8
-#define boost 8
-void Drinks ( uint8 u8Beverage );
+#include "bebid.h"
 
-typedef enum //menu
-{
-	Mojito;
-	Paloma;
-	PerlaNegra
-}bebidass;
-
-typedef enum //menu
-{
-	enMenu;
-	enServerDrink;
-	enWaitTillServed
-}tenStates;
 
 void main ( void )
 {
 	u8Beverage = 0;
-	printf("Bienvenidos Maquina\n expendedora de bebidas\n");
+	printf("Bienvenidos a nuestra Maquina\n expendedora de bebidas\n");
 	tenStates enCurrentState = enMenu;
+
+	while(1)
+	{
+		SM_MicroWaveStateMachine();
+		delay(1000);
+	}
 
 	while ( 1 )
 	{
@@ -94,3 +72,9 @@ void Drinks ( uint8 u8Beverage )
 	default: printf("ERROR, no hay bebida con ese numero");
 }
 
+void delay(int number_of_seconds)
+{
+	int milli_seconds = 1000 * number_of_seconds;
+	clock_t start_time = clock();
+	while(clock() < start_time + milli_seconds);
+}

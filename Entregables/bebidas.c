@@ -13,8 +13,6 @@ typedef enum //menu
 
 
 
-//*
-
 
 void main ( void )
 {
