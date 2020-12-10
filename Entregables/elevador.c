@@ -2,8 +2,8 @@
 #include "elevadorh.h"
 
 void int32EstadoDetenido(sElevador_t *Elevador);
-void vfnSubiendo(sElevador_t *Elevador);
-void vfnBajando(sElevador_t *Elevador);
+void Subiendo(sElevador_t *Elevador);
+void Bajando(sElevador_t *Elevador);
 
 int main()
 {
@@ -21,10 +21,10 @@ int main()
             int32EstadoDetenido(pElevador);
             break;
         case STATE_UP:
-            vfnSubiendo(pElevador);
+            Subiendo(pElevador);
             break;
         case STATE_DOWN:
-            vfnBajando(pElevador);
+            Bajando(pElevador);
             break;
         default:
             int32EstadoDetenido(pElevador);
@@ -42,38 +42,45 @@ void int32EstadoDetenido(sElevador_t *Elevador){
     scanf("%d", &i32level);
     printf("\nHas elegido el piso %d", i32level);
     printf("\nSe cierran las puertas");
-    if(i32level >= PB && i32level < MAX_PISOS){        
+    if(i32level >= PB && i32level < MAX_PISOS)
+    {        
         if (i32level > Elevador->level){
         state = STATE_UP;
     }
-    else if (i32level < Elevador->level){
+    else if (i32level < Elevador->level)
+    {
         state = STATE_DOWN;
     }
-    else{
+    else
+    {
         printf("\nEstas en ese piso");
     }
     Elevador->level = i32level;
     Elevador->state = state;
     }
-    else{
+    else
+    {
         printf("\n%d es una selección no válida", i32level);
         printf("\nEste es un edificio de %d pisos", MAX_PISOS);
     }
 };
 
-void vfnSubiendo(sElevador_t *Elevador){   
+void Subiendo(sElevador_t *Elevador)
+{   
     printf("\nSubiendo...");
-    if(Elevador->level == 0){
+    if(Elevador->level == 0)
+    {
         printf("\nHas llegado a la planta baja");
         Elevador->state = STATE_STOP;
     }
-    else{
+    else
+    {
         printf("\nHas llegado al piso %d", Elevador->level);
         Elevador->state = STATE_STOP;
     }
 };
 
-void vfnBajando(sElevador_t *Elevador)
+void Bajando(sElevador_t *Elevador)
 {
     printf("\nBajando...");
     printf("\nHas llegado al piso %d", Elevador->level);
