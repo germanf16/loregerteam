@@ -1,7 +1,3 @@
-//
-// Created by javia on 12/7/2020.
-//
-
 #ifndef UNTITLED2_ELEVADORH_H
 #define UNTITLED2_ELEVADORH_H
 #define MAX_PISOS 15
