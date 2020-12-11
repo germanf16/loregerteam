@@ -1,9 +1,6 @@
 #include <stdio.h>
 #include "elevadorh.h"
 
-void int32EstadoDetenido(sElevador_t *Elevador);
-void Subiendo(sElevador_t *Elevador);
-void Bajando(sElevador_t *Elevador);
 
 int main()
 {
@@ -33,7 +30,8 @@ int main()
     }
 }
 
-void int32EstadoDetenido(sElevador_t *Elevador){
+void int32EstadoDetenido(sElevador_t *Elevador)
+{
     int i32level = 0;
     eEstados_t state = Elevador->state;
 
@@ -64,6 +62,7 @@ void int32EstadoDetenido(sElevador_t *Elevador){
         printf("\nEste es un edificio de %d pisos", MAX_PISOS);
     }
 };
+
 
 void Subiendo(sElevador_t *Elevador)
 {   

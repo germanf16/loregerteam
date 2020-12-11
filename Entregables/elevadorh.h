@@ -20,8 +20,8 @@ typedef struct
 
 #define PB 0
 
-extern void int32EstadoDetenido(sElevador_t *Elevador);
-extern void Subiendo(sElevador_t *Elevador);
-extern void Bajando(sElevador_t *Elevador);
+void int32EstadoDetenido(sElevador_t *Elevador);
+void Subiendo(sElevador_t *Elevador);
+void Bajando(sElevador_t *Elevador);
 
-#define //UNTITLED2_ELEVADORH_H
+
